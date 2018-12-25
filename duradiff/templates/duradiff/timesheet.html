@@ -1,0 +1,100 @@
+{% extends "duradiff/main_template.html" %}
+<!--{% load crispy_forms_tags %}-->
+{% block title %}Resource Salary System{% endblock %}
+{% block content %}
+<head>
+
+  <!-- librairies for bootstrap and hitpa favicon -->
+
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+       <link rel="shortcut icon" type="image/png" href="duradiff/favicon.png">
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- jquery and jqueryui librairies needed for jquery UI datepicker -->
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- css theme called south-street chosen jqueryui css -->
+       <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/south-street/jquery-ui.css" />
+  <!-- prototype.js for the ajax call -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/prototype/1.7.3/prototype.js"></script>
+       <script src="https://fastcdn.org/Prototype/1.7.3/prototype.js"></script>
+<style>
+p2 {
+  position: absolute; top: 30px; left: 290px; font-size: 28px;color:blue;
+}
+</style>
+
+</head>
+<body>
+<div class = "container">
+
+<!-- <form action=" " method="post">
+    {% csrf_token %}
+    {% crispy form %}
+    
+</form> -->
+<div class="row">
+   <div class="col-sm-6 col-md-3">
+  <p2 id="notice" ></p2> 
+<form action= " " method="post">
+  {% csrf_token %}
+  {{form }}
+  <button id="show" type="submit">Submit</button>
+</form>
+ 
+   </div>
+</div>
+
+<p id="demo"></p> 
+
+    <a href="/admin" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-Salary"></span> Back 
+    </a>
+
+    <a href="/accounts/logout/" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-logout"></span> Logout 
+    </a>
+
+<script>
+var JQry = jQuery.noConflict();
+
+  JQry( function() {
+    JQry( "#id_theday" ).datepicker({dateFormat :  'yy-mm-dd'});
+    JQry( "#id_endday" ).datepicker({dateFormat :  'yy-mm-dd'});
+  } );
+  </script>
+
+<script>
+var JQry = jQuery.noConflict();
+
+JQry('#show').on('click', function(){
+    JQry('#demo').html("Timesheet saved !!").delay(5500);
+});
+</script>
+
+<script>
+         function get_name() {
+            new Ajax.Request('timesheet/ajax/', {
+               method: 'post',
+               parameters: $H({'rid':$('id_rid').getValue()}),
+               onSuccess: successFunc,
+               onFailure:  failureFunc
+            });
+         }
+         function successFunc(response) {
+            if (200 == response.status) {
+               
+            }
+            var container = $('notice');
+            var content = response.responseText;
+            container.update(content);
+            
+         }
+         function failureFunc(response) {
+            alert("Call is failed" );
+         }
+</script>
+
+</body>
+
+{% endblock %}

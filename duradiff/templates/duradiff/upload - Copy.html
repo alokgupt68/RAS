@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<html>
+    <head>
+       <script src="/pace.js"></script>
+       <link href="/loadingbar.css" rel="stylesheet" />
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+       <link rel="shortcut icon" type="image/png" href="duradiff/favicon.png">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+       <link rel="shortcut icon" type="image/png" href="{%  static 'duradiff/favicon.png' %}"/>
+        <title>
+            Offrole Attendance upload
+        </title>
+    </head>
+    <body style="margin-top: 30px;margin-left: 30px;">
+
+        <form action=" " method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file"
+                   title="Upload excel file"
+                   name="excel_file"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required">
+            <p>
+            <input onclick="update()" type="submit"
+                   value="Upload"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+        </form>
+<p id="demo"></p> 
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+      <a href="/admin" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-Salary"></span> Back 
+    </a>
+
+	<a href="/accounts/logout/" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-logout"></span> Logout 
+    </a>
+  <script> function myFunction() {
+    document.getElementById("demo").innerHTML = "Data uploaded !!";
+   }
+</script>
+
+        <p></p>
+        <hr>
+	
+{{hrsworked | safe}} &nbsp &nbsp <br>
+{{totalworked|safe}}<br>
+{{srid|safe|safe}}
+
+    </body>
+</html>

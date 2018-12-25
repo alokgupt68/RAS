@@ -1,0 +1,56 @@
+{% extends "duradiff/main_template.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Resource Salary System{% endblock %}
+{% block content %}
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="shortcut icon" type="image/png" href="duradiff/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</head>
+ 
+<p>
+                {% load static %}
+                <img src="{% static "duradiff/logo.jpg" %}" alt="My image"/>
+ 
+  </p>
+<div class = "container">
+  <div class = "jumbotron">
+ 
+<form action=" " method="post">{% csrf_token %}
+    <label for="month">Month: </label>
+    {{form.month}}
+<br/>
+<div class="fieldWrapper">
+    {{ form.year.errors }}
+    <label for="{{ form.year.id_for_label }}">Year:</label>
+    {{ form.year }}
+</div>
+<div class="fieldWrapper">
+    {{ form.rid.errors }}
+    <label for="{{ form.rid.id_for_label }}">rid:</label>
+    {{ form.rid }}
+</div>
+<div class="fieldWrapper">
+    {{ form.misc.errors }}
+    <label for="{{ form.misc.id_for_label }}">Miscellaneous:</label>
+    {{ form.misc }}
+</div>
+<div class="fieldWrapper">
+    {{ form.conv.errors }}
+    <label for="{{ form.conv.id_for_label }}">Conveyance:</label>
+    {{ form.conv }}
+</div>
+    <input type="submit" value="Calculate Salary">
+<input type="submit" value="Generate Salary Slip">
+</form>
+<p>
+</div>
+
+
+Click <a href="http://127.0.0.1:8000/admin">here</a> for dataentry
+
+Click <a href="http://127.0.0.1:8000/accounts/logout/">here</a> to logout
+ 
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "duradiff/main_template.html" %}
+<!--{% load crispy_forms_tags %}-->
+{% block title %}Resource Salary System{% endblock %}
+{% block content %}
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="shortcut icon" type="image/png" href="duradiff/favicon.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+
+</head>
+
+<div class = "container">
+
+
+<div class="row">
+   <div class="col-sm-6 col-md-3">
+  
+<form action= " " method="post">
+  {% csrf_token %}
+  {{form }}
+  <button id="show" onclick="myFunction()" type="submit">Submit</button>
+</form>
+   </div>
+</div>
+
+<p id="demo"></p> 
+
+<script>
+$(function() {
+  $( "#id_theday" ).datepicker({ 
+        dateFormat: 'yyyy-mm-dd'
+    });
+  $( "#id_endday" ).datepicker({ 
+        dateFormat: 'yyyy-mm-dd'
+    });
+});
+</script>
+
+<a href="/admin" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-Salary"></span> Back 
+    </a>
+
+	<a href="/accounts/logout/" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-logout"></span> Logout 
+    </a>
+
+  <script> function myFunction() {
+    document.getElementById("demo").innerHTML = "Timesheet saved !!";
+   }
+</script>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "duradiff/main_template.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}Resource Attendance Salary{% endblock %}
+{% block content %}
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+</head>
+ 
+<p>
+                {% load static %}
+                <img src="{% static "duradiff/logo.jpg" %}" alt="My image"/>
+ 
+  </p>
+<div class = "container">
+  
+ 
+<form action=" " method="post">{% csrf_token %}
+
+{% crispy form %}
+
+
+</form>
+
+
+</div>
+<a href="/admin" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-upload"></span> Back 
+    </a>
+<!-- <a href="../accounts/login/gensal/timesheet" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-Salary"></span> timesheet 
+    </a>  -->
+	<a href="/accounts/logout/" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-logout"></span> Logout 
+    </a>
+
+ 
+{% endblock %}
