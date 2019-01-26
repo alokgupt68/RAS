@@ -233,5 +233,7 @@ def upload_file(request):
 def getridname(request):
     # Expect an auto 'type' to be passed in via Ajax and POST
     if request.is_ajax() and request.method == 'POST':
-      ridname = Resource.objects.get(rid=request.POST.get('rid')).rid
-    return HttpResponse(ridname)
+      ridname = Resource.objects.get(rid=request.POST.get('rid')).rid 
+      ridstatus = Resource.objects.get(rid=request.POST.get('rid')).status
+    # In Python, we can return multiple values from a function using a tuple like((ridname,ridstatus))
+    return HttpResponse((ridname,' is ',ridstatus, ' rid '))
