@@ -234,5 +234,4 @@ def getridname(request):
     # Expect an auto 'type' to be passed in via Ajax and POST
     if request.is_ajax() and request.method == 'POST':
       ridname = Resource.objects.get(rid=request.POST.get('rid')).rid
-    
     return HttpResponse(ridname)
