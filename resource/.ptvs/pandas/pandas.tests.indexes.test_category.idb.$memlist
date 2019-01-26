@@ -1,0 +1,17 @@
+cf
+PY3
+unicode
+tm
+CategoricalIndex
+Index
+range
+TestCategoricalIndex
+Base
+np
+pd
+compat
+IntervalIndex
+CategoricalDtype
+assert_almost_equal
+pytest
+Categorical

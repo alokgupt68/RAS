@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\duradiff",
-    "\\duradiff\\templates",
-    "\\duradiff\\templates\\duradiff",
-    "\\tutorial3"
+    "\\duradiff"
   ],
-  "SelectedNode": "\\duradiff\\views.py",
+  "SelectedNode": "\\duradiff\\forms.py",
   "PreviewInSolutionExplorer": false
 }

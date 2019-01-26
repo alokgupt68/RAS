@@ -1,0 +1,7 @@
+PY2
+text_type
+binary_type
+integer_types
+basestring
+string_types
+sys

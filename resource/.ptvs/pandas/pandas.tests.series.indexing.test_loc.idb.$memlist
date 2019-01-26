@@ -1,0 +1,14 @@
+lrange
+pd
+test_basic_setitem_with_labels
+test_loc_setitem_boolean
+test_loc_getitem_setitem_integer_slice_keyerrors
+Timestamp
+np
+test_loc_getitem
+Series
+test_loc_getitem_not_monotonic
+test_loc_setitem_corner
+pytest
+assert_series_equal
+test_loc_getitem_iterator

@@ -1,0 +1,13 @@
+Series
+DataFrame
+TestCategorical
+tm
+Categorical
+np
+Index
+CategoricalIndex
+TestPrivateCategoricalAPI
+TestCategoricalAPIWithFactor
+pytest
+_recode_for_categories
+TestCategoricalAPI

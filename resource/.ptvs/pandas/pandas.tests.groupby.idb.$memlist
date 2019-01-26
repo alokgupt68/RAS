@@ -1,0 +1,17 @@
+test_function
+test_categorical
+test_value_counts
+test_bin_groupby
+test_counting
+test_groupby
+test_transform
+conftest
+test_nth
+test_grouping
+test_whitelist
+test_rank
+aggregate
+test_filters
+test_apply
+test_index_as_string
+test_timegrouper

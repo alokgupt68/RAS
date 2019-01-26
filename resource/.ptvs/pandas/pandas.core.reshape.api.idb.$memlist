@@ -1,0 +1,13 @@
+get_dummies
+pivot
+concat
+crosstab
+merge
+merge_asof
+cut
+merge_ordered
+qcut
+melt
+lreshape
+pivot_table
+wide_to_long

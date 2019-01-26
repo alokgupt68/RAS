@@ -1,0 +1,12 @@
+edit_bookmark
+staff_member_required
+get_object_or_404
+HttpResponse
+BookmarkForm
+HttpResponseRedirect
+messages
+add_bookmark
+render_to_response
+remove_bookmark
+csrf_exempt
+Bookmark

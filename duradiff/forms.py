@@ -1,13 +1,20 @@
 ﻿from django import forms
-from django.forms import widgets
+from django.forms import widgets, ModelChoiceField
 from django.contrib.admin import widgets
 #from django.contrib.admin.widgets import AdminDateWidget
 from duradiff.models import Salary, Timesheet, Resource
+from django.db.models.functions import Lower
 from django.conf import settings
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Layout, Field
 from crispy_forms.bootstrap import (
     PrependedText, PrependedAppendedText, AppendedText, FormActions)
+
+#To provide customized representations, subclass ModelChoiceField and override label_from_instance. 
+#This method will receive a model object and should return a string suitable for representing it. 
+class MyModelChoiceField(ModelChoiceField):
+    def label_from_instance(self, obj):
+        return '%s   (%i)' % (obj.firstname, obj.rid)
 
 CHOICES = ((None,'Select month'),('1','JAN'), ('2','FEB'),('3','MAR'),('4','APR'),('5','MAY'),('6','JUN'),('7','JUL'),('8','AUG'),('9','SEP'),('10','OCT'),('11','NOV'),('12','DEC'))
  
@@ -58,7 +65,7 @@ class gensalary(forms.Form):
 #    )
 
 class timeentryform(forms.ModelForm):
-    rid = forms.ModelChoiceField(queryset=Resource.objects.all(), widget=forms.TextInput(attrs={'onchange':'get_name();'}), label="rid")
+    rid = MyModelChoiceField(queryset=Resource.objects.all().order_by(Lower('firstname')),empty_label="(Select RID)",to_field_name="rid")
     #theday = forms.DateField(input_formats=settings.DATE_INPUT_FORMATS)
     # You can disable autocomplete on such fields by setting the HTML5 autocomplete attribute to off. 
     # To achieve this in Django's forms you need to pass additional information to the widget for each input,

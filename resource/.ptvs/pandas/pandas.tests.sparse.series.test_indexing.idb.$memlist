@@ -1,0 +1,10 @@
+Series
+tm
+test_where_with_numeric_data
+test_where_with_numeric_data_and_other
+np
+test_where_with_bool_data
+test_where_with_bool_data_and_other
+pytest
+SparseSeries
+pytestmark

@@ -1,0 +1,13 @@
+unicode
+export_set
+extensions
+TEX_RESERVED_SYMBOLS_MAP
+TEX_RESERVED_SYMBOLS_RE
+title
+_cmidrule
+_colspec
+re
+TABLE_TEMPLATE
+_escape_tex_reserved_symbols
+_serialize_row
+_midrule

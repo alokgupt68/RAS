@@ -1,0 +1,9 @@
+catch_warnings
+test_css_to_excel_inherited
+tm
+test_css_to_excel
+test_css_to_excel_multiple
+test_css_to_excel_bad_colors
+test_css_to_excel_good_colors
+CSSToExcelConverter
+pytest

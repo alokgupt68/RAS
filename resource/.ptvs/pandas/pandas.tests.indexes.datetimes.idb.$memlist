@@ -1,0 +1,16 @@
+test_datetimelike
+test_arithmetic
+test_setops
+test_datetime
+test_partial_slicing
+test_missing
+test_date_range
+test_timezones
+test_misc
+test_indexing
+test_tools
+test_formats
+test_scalar_compat
+test_ops
+test_construction
+test_astype

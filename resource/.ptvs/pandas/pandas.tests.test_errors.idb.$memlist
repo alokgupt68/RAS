@@ -1,0 +1,10 @@
+test_AbstractMethodError_classmethod
+catch_warnings
+test_error_rename
+pandas
+AbstractMethodError
+pd
+tm
+pytest
+Foo
+test_catch_oob

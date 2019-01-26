@@ -1,0 +1,10 @@
+PY2
+get_option
+DataFrame
+PY3
+read_clipboard
+option_context
+compat
+StringIO
+to_clipboard
+warnings

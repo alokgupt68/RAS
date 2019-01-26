@@ -1,0 +1,6 @@
+include
+path
+admin
+urlpatterns
+settings
+static

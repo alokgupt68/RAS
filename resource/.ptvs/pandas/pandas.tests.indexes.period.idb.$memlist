@@ -1,0 +1,13 @@
+test_indexing
+test_asfreq
+test_period_range
+test_astype
+test_construction
+test_tools
+test_partial_slicing
+test_setops
+test_scalar_compat
+test_formats
+test_arithmetic
+test_ops
+test_period

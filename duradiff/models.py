@@ -15,6 +15,11 @@ class Qualification(models.Model):
     def __str__(self):
           return self.jobtitle
 
+class Department(models.Model):
+    Dept = models.CharField(max_length=25)
+    def __str__(self):
+          return self.Dept
+
 class Statemaster(models.Model):
     state = models.CharField(max_length=25)
     def __str__(self):
@@ -52,9 +57,10 @@ class Resource(models.Model):
     splallowance = models.DecimalField(max_digits=8, decimal_places=2,blank= False,default = 0,verbose_name = 'Special Allowance')
     skill = models.ForeignKey(Category, on_delete = models.CASCADE)
     jobtitle = models.ForeignKey(Qualification, on_delete = models.CASCADE)
+    Dept = models.ForeignKey(Department, on_delete = models.CASCADE, default=1, null=True)
     state = models.ForeignKey(Statemaster, on_delete = models.CASCADE)
     city = models.ForeignKey(Citymaster, on_delete = models.CASCADE)
-    Approvalnote = models.FileField(null = True, blank=True)
+    #Approvalnote = models.FileField(null = True, blank=True)
     Remarks = models.CharField(max_length = 70, blank=True)
     
     def __str__(self):
@@ -62,7 +68,7 @@ class Resource(models.Model):
 
     def save(self, *args, **kwargs):
         super(Resource, self).save(*args, **kwargs)
-        filename = self.Approvalnote.url
+        #filename = self.Approvalnote.url
         # Do anything you'd like with the data in filename
 
 class Timesheet(models.Model):
@@ -83,7 +89,7 @@ class Timesheet(models.Model):
     ridshifthrs = models.DecimalField(max_digits=5, decimal_places=2,blank= False,default = 0)
     def __str__(self):
         return '%s' % (self.rid)
-
+    
     def save(self, *args, **kwargs):
         if (self.OD == True):
           self.hrsworked = self.ridshifthrs

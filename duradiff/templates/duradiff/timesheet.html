@@ -15,12 +15,12 @@
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <!-- css theme called south-street chosen jqueryui css -->
        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/south-street/jquery-ui.css" />
-  <!-- prototype.js for the ajax call -->
+  <!-- prototype.js used earlier for the ajax call -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/prototype/1.7.3/prototype.js"></script>
        <script src="https://fastcdn.org/Prototype/1.7.3/prototype.js"></script>
 <style>
 p2 {
-  position: absolute; top: 30px; left: 290px; font-size: 28px;color:blue;
+  position: absolute; top: 30px; left: 290px; font-size: 18px;color:blue;display:inline;
 }
 </style>
 
@@ -34,7 +34,7 @@ p2 {
     
 </form> -->
 <div class="row">
-   <div class="col-sm-6 col-md-3">
+<div class="col-sm-6 col-md-3">
   <p2 id="notice" ></p2> 
 <form action= " " method="post">
   {% csrf_token %}
@@ -57,43 +57,44 @@ p2 {
 
 <script>
 var JQry = jQuery.noConflict();
-
   JQry( function() {
     JQry( "#id_theday" ).datepicker({dateFormat :  'yy-mm-dd'});
     JQry( "#id_endday" ).datepicker({dateFormat :  'yy-mm-dd'});
   } );
-  </script>
+</script>
 
 <script>
 var JQry = jQuery.noConflict();
-
 JQry('#show').on('click', function(){
     JQry('#demo').html("Timesheet saved !!").delay(5500);
 });
 </script>
-
+<!-- This script uses the onchange attribute of the rid field in forms.py to accomplish the same thing that the script below is doing
 <script>
-         function get_name() {
-            new Ajax.Request('timesheet/ajax/', {
-               method: 'post',
-               parameters: $H({'rid':$('id_rid').getValue()}),
-               onSuccess: successFunc,
-               onFailure:  failureFunc
-            });
-         }
-         function successFunc(response) {
-            if (200 == response.status) {
-               
-            }
-            var container = $('notice');
-            var content = response.responseText;
-            container.update(content);
-            
-         }
-         function failureFunc(response) {
-            alert("Call is failed" );
-         }
+var get_name = function(){
+  JQry.ajax({
+    method: 'POST',
+    url: 'timesheet/ajax/',
+    data:"rid="+JQry("#id_rid").val(),
+    success: function( resp ) {
+      JQry( '#notice' ).html(resp);
+    }
+  });
+}
 </script>
+-->
+  <script>
+    JQry("#id_rid").change(function(){
+  JQry.ajax({
+    method: 'POST',
+    url: 'timesheet/ajax/',
+    data:"rid="+JQry("#id_rid").val(),
+    success: function( resp ) {
+      JQry( '#notice' ).html(resp);
+    }
+  });
+});
+  </script>
 
 </body>
 

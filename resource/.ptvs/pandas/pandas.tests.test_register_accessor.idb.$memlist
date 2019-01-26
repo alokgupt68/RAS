@@ -1,0 +1,10 @@
+pd
+test_register
+tm
+MyAccessor
+test_raises_attribute_error
+test_overwrite_warns
+ensure_removed
+test_accessor_works
+pytest
+contextlib

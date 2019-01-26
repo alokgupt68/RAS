@@ -10,6 +10,7 @@ urlpatterns = [
         path('timesheet/timesheet/ajax/', views.getridname),
         path('admin_tools/',include('admin_tools.urls')),
         path('gensal/inactiveres/',views.redirect_view),
+        path('gensal/filetype',views.redirectfiletype_view),
         ]
          
              

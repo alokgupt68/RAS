@@ -1,0 +1,16 @@
+detect
+dbfrecord
+tempfile
+export_set
+extensions
+import_set
+os
+StringIO
+title
+dbfpy
+io
+is_py3
+dbf
+DEFAULT_ENCODING
+struct
+dbfnew

@@ -1,0 +1,13 @@
+test_td_constructor_value_error
+pd
+test_iso_constructor_raises
+test_td_from_repr_roundtrip
+tm
+Timedelta
+np
+test_td_constructor_on_nanoseconds
+test_iso_constructor
+test_construction
+pytest
+timedelta
+test_overflow_on_construction

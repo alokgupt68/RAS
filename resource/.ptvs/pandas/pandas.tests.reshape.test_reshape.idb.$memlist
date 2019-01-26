@@ -1,0 +1,17 @@
+np
+TestMakeAxisDummies
+nan
+DataFrame
+Index
+Series
+get_dummies
+catch_warnings
+OrderedDict
+assert_frame_equal
+pd
+u
+tm
+TestGetDummies
+TestCategoricalReshape
+pytest
+Categorical

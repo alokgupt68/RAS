@@ -1,0 +1,5 @@
+test_merge_ordered
+test_merge_index_as_string
+test_join
+test_merge
+test_merge_asof

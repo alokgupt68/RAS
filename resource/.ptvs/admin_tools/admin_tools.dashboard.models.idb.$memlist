@@ -1,0 +1,16 @@
+models
+dashboards
+DashboardPreferences
+Dashboard
+AppListDashboardModule
+DashboardModule
+import_path_is_changed
+FeedDashboardModule
+settings
+DefaultIndexDashboard
+LinkListDashboardModule
+modules
+AppIndexDashboard
+ModelListDashboardModule
+DefaultAppIndexDashboard
+user_model

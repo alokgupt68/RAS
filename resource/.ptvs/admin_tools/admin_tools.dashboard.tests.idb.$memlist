@@ -1,0 +1,11 @@
+AppIndexDashboardTest
+Group
+ManagementCommandTest
+management
+DashboardModule
+auth_models
+__test__
+mktemp
+TestCase
+DjangoTestCase
+AppIndexDashboard

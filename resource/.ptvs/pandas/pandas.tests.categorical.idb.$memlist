@@ -1,0 +1,14 @@
+test_indexing
+test_dtypes
+test_algos
+test_missing
+test_warnings
+test_subclass
+test_repr
+conftest
+test_api
+test_analytics
+test_sorting
+test_operators
+test_constructors
+common

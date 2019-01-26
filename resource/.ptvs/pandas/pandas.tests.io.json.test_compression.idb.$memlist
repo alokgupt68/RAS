@@ -1,0 +1,12 @@
+test_read_zipped_json
+pd
+tm
+test_chunksize_with_compression
+test_with_s3_url
+assert_raises_regex
+assert_frame_equal
+test_lines_with_compression
+test_read_unsupported_compression_type
+pytest
+test_write_unsupported_compression_type
+test_compression_roundtrip

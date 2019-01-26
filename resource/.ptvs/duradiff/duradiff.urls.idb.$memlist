@@ -1,0 +1,6 @@
+include
+path
+app_name
+views
+urlpatterns
+TimeView

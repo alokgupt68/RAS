@@ -1,0 +1,10 @@
+TestCategorical
+tm
+Categorical
+np
+Index
+CategoricalIndex
+TestCategoricalIndexingWithFactor
+PeriodIndex
+pytest
+TestCategoricalIndexing

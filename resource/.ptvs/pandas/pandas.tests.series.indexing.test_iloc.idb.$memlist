@@ -1,0 +1,8 @@
+lrange
+Series
+test_iloc
+assert_almost_equal
+np
+range
+test_iloc_nonunique
+assert_series_equal

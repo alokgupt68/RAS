@@ -34,15 +34,14 @@ class CustomMenu(Menu):
             ),
             items.MenuItem('Attendance Entry',
                 children=[
-                    items.MenuItem('Single Timesheet', 'http://127.0.0.1:8000/accounts/login/gensal/timesheet/'),
-                    items.MenuItem('Timesheet Grid', 'http://127.0.0.1:8000/accounts/login/gensal/multimesheet/'),
-                    items.MenuItem('Upload Timesheet', 'http://127.0.0.1:8000/accounts/login/gensal/upload/'),
+                    items.MenuItem('Single Timesheet', '/accounts/login/gensal/timesheet/'),
+                    items.MenuItem('Timesheet Grid', '/accounts/login/gensal/multimesheet/'),
+                    items.MenuItem('Upload Timesheet', '/accounts/login/gensal/upload/'),
                 ]
                 ),
                         items.MenuItem('Salary Generation',
                 children=[
-                    items.MenuItem('Single Resource Salary', 'http://127.0.0.1:8000/accounts/login/gensal/gensal/'),
-                    #items.MenuItem('Salary Grid', 'http://127.0.0.1:8000/accounts/login/gensal/multimesheet/'),
+                    items.MenuItem('Single Resource Salary', '/accounts/login/gensal/gensal/'),
                 ]
                 ),
         ]

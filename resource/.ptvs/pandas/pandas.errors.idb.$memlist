@@ -1,0 +1,12 @@
+UnsortedIndexError
+EmptyDataError
+ParserWarning
+MergeError
+DtypeWarning
+NullFrequencyError
+PerformanceWarning
+OutOfBoundsDatetime
+AccessorRegistrationWarning
+ParserError
+AbstractMethodError
+UnsupportedFunctionCall

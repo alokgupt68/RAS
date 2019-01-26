@@ -1,0 +1,9 @@
+lzma
+pd
+bz2
+tm
+gzip
+CompressionTests
+compat
+pytest
+td

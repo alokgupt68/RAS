@@ -1,0 +1,11 @@
+long
+Series
+tm
+Categorical
+np
+Index
+CategoricalDtype
+CategoricalIndex
+pytest
+Timestamp
+TestCategoricalDtypes

@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48cc7525-92e0-429a-819a-b8d7d15b3f2d}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|resource|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="duradiff\admin.py" />
+    <Compile Include="duradiff\apps.py" />
+    <Compile Include="duradiff\forms.py" />
+    <Compile Include="duradiff\migrations\0001_initial.py" />
+    <Compile Include="duradiff\migrations\0002_salary_daysinmonth.py" />
+    <Compile Include="duradiff\migrations\0003_auto_20180408_1243.py" />
+    <Compile Include="duradiff\migrations\0004_auto_20180408_1327.py" />
+    <Compile Include="duradiff\migrations\0005_auto_20180408_1343.py" />
+    <Compile Include="duradiff\migrations\0006_auto_20180408_1430.py" />
+    <Compile Include="duradiff\migrations\0007_auto_20180409_0836.py" />
+    <Compile Include="duradiff\migrations\0008_auto_20180413_1903.py" />
+    <Compile Include="duradiff\migrations\0009_auto_20180414_1308.py" />
+    <Compile Include="duradiff\migrations\0010_auto_20180414_1312.py" />
+    <Compile Include="duradiff\migrations\0011_citymaster_state.py" />
+    <Compile Include="duradiff\migrations\0012_auto_20180421_1827.py" />
+    <Compile Include="duradiff\migrations\0013_auto_20180422_0912.py" />
+    <Compile Include="duradiff\migrations\0014_auto_20180422_1930.py" />
+    <Compile Include="duradiff\migrations\0015_salary_name.py" />
+    <Compile Include="duradiff\migrations\0016_auto_20180428_0719.py" />
+    <Compile Include="duradiff\migrations\0017_auto_20180503_1005.py" />
+    <Compile Include="duradiff\migrations\0018_auto_20180506_1934.py" />
+    <Compile Include="duradiff\migrations\0019_resource_data.py" />
+    <Compile Include="duradiff\migrations\0020_auto_20180529_1659.py" />
+    <Compile Include="duradiff\migrations\0021_resource_splallowance.py" />
+    <Compile Include="duradiff\migrations\0022_timesheet_endday.py" />
+    <Compile Include="duradiff\migrations\0023_remove_salary_miscellaneous.py" />
+    <Compile Include="duradiff\migrations\0024_salary_miscellaneous.py" />
+    <Compile Include="duradiff\migrations\0025_auto_20181002_1930.py" />
+    <Compile Include="duradiff\migrations\0026_auto_20181004_1451.py" />
+    <Compile Include="duradiff\migrations\0027_auto_20190106_2257.py" />
+    <Compile Include="duradiff\migrations\0028_auto_20190106_2307.py" />
+    <Compile Include="duradiff\migrations\0029_auto_20190106_2314.py" />
+    <Compile Include="duradiff\migrations\__init__.py" />
+    <Compile Include="duradiff\models.py" />
+    <Compile Include="duradiff\tests.py" />
+    <Compile Include="duradiff\urls.py" />
+    <Compile Include="duradiff\views - with openpyxl.py" />
+    <Compile Include="duradiff\views - with pdf.py" />
+    <Compile Include="duradiff\views.py" />
+    <Compile Include="duradiff\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="tutorial3\dashboard.py" />
+    <Compile Include="tutorial3\menu.py" />
+    <Compile Include="tutorial3\settings.py" />
+    <Compile Include="tutorial3\urls.py" />
+    <Compile Include="tutorial3\wsgi.py" />
+    <Compile Include="tutorial3\__init__.py" />
+    <Compile Include="utils.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="catalog\base_generic.html" />
+    <Content Include="duradiff\static\duradiff\favicon.png" />
+    <Content Include="duradiff\static\duradiff\favicon2.png" />
+    <Content Include="duradiff\static\duradiff\logo - Copy.jpg" />
+    <Content Include="duradiff\static\duradiff\logo.jpg" />
+    <Content Include="duradiff\templates\duradiff\filetype.html" />
+    <Content Include="duradiff\templates\duradiff\hello.html" />
+    <Content Include="duradiff\templates\duradiff\hellov1.html" />
+    <Content Include="duradiff\templates\duradiff\inactiveres.html" />
+    <Content Include="duradiff\templates\duradiff\main_template.html" />
+    <Content Include="duradiff\templates\duradiff\multimesheet.html" />
+    <Content Include="duradiff\templates\duradiff\New Text Document.txt" />
+    <Content Include="duradiff\templates\duradiff\old.txt" />
+    <Content Include="duradiff\templates\duradiff\oldhello.html" />
+    <Content Include="duradiff\templates\duradiff\old_upload.html" />
+    <Content Include="duradiff\templates\duradiff\progressbar.html" />
+    <Content Include="duradiff\templates\duradiff\timesheet with prototype.html" />
+    <Content Include="duradiff\templates\duradiff\timesheet.html" />
+    <Content Include="duradiff\templates\duradiff\timesheet_withdatepickerfailure.html" />
+    <Content Include="duradiff\templates\duradiff\upload - Copy.html" />
+    <Content Include="duradiff\templates\duradiff\upload.html" />
+    <Content Include="duradiff\templates\duradiff\upload.html - with progress bar" />
+    <Content Include="duradiff\templates\duradiff\upload.html-rudimentary" />
+    <Content Include="duradiff\templates\pdf\invoice.html" />
+    <Content Include="RAS\PythonToolsLinks1\PythonTools.html" />
+    <Content Include="RAS\PythonToolsLinks1\vslogo.png" />
+    <Content Include="requirements.txt" />
+    <Content Include="static\admin\css\autocomplete.css" />
+    <Content Include="static\admin\css\base.css" />
+    <Content Include="static\admin\css\changelists.css" />
+    <Content Include="static\admin\css\dashboard.css" />
+    <Content Include="static\admin\css\fonts.css" />
+    <Content Include="static\admin\css\forms.css" />
+    <Content Include="static\admin\css\login.css" />
+    <Content Include="static\admin\css\responsive.css" />
+    <Content Include="static\admin\css\responsive_rtl.css" />
+    <Content Include="static\admin\css\rtl.css" />
+    <Content Include="static\admin\css\vendor\select2\select2.css" />
+    <Content Include="static\admin\css\vendor\select2\select2.min.css" />
+    <Content Include="static\admin\css\widgets.css" />
+    <Content Include="static\admin\fonts\LICENSE.txt" />
+    <Content Include="static\admin\fonts\README.txt" />
+    <Content Include="static\admin\img\calendar-icons.svg" />
+    <Content Include="static\admin\img\gis\move_vertex_off.svg" />
+    <Content Include="static\admin\img\gis\move_vertex_on.svg" />
+    <Content Include="static\admin\img\icon-addlink.svg" />
+    <Content Include="static\admin\img\icon-alert.svg" />
+    <Content Include="static\admin\img\icon-calendar.svg" />
+    <Content Include="static\admin\img\icon-changelink.svg" />
+    <Content Include="static\admin\img\icon-clock.svg" />
+    <Content Include="static\admin\img\icon-deletelink.svg" />
+    <Content Include="static\admin\img\icon-no.svg" />
+    <Content Include="static\admin\img\icon-unknown-alt.svg" />
+    <Content Include="static\admin\img\icon-unknown.svg" />
+    <Content Include="static\admin\img\icon-yes.svg" />
+    <Content Include="static\admin\img\inline-delete.svg" />
+    <Content Include="static\admin\img\README.txt" />
+    <Content Include="static\admin\img\search.svg" />
+    <Content Include="static\admin\img\selector-icons.svg" />
+    <Content Include="static\admin\img\sorting-icons.svg" />
+    <Content Include="static\admin\img\tooltag-add.svg" />
+    <Content Include="static\admin\img\tooltag-arrowright.svg" />
+    <Content Include="static\admin\js\actions.js" />
+    <Content Include="static\admin\js\actions.min.js" />
+    <Content Include="static\admin\js\admin\DateTimeShortcuts.js" />
+    <Content Include="static\admin\js\admin\RelatedObjectLookups.js" />
+    <Content Include="static\admin\js\autocomplete.js" />
+    <Content Include="static\admin\js\calendar.js" />
+    <Content Include="static\admin\js\cancel.js" />
+    <Content Include="static\admin\js\change_form.js" />
+    <Content Include="static\admin\js\collapse.js" />
+    <Content Include="static\admin\js\collapse.min.js" />
+    <Content Include="static\admin\js\core.js" />
+    <Content Include="static\admin\js\inlines.js" />
+    <Content Include="static\admin\js\inlines.min.js" />
+    <Content Include="static\admin\js\jquery.init.js" />
+    <Content Include="static\admin\js\popup_response.js" />
+    <Content Include="static\admin\js\prepopulate.js" />
+    <Content Include="static\admin\js\prepopulate.min.js" />
+    <Content Include="static\admin\js\prepopulate_init.js" />
+    <Content Include="static\admin\js\SelectBox.js" />
+    <Content Include="static\admin\js\SelectFilter2.js" />
+    <Content Include="static\admin\js\timeparse.js" />
+    <Content Include="static\admin\js\urlify.js" />
+    <Content Include="static\admin\js\vendor\jquery\jquery.js" />
+    <Content Include="static\admin\js\vendor\jquery\jquery.min.js" />
+    <Content Include="static\admin\js\vendor\jquery\LICENSE-JQUERY.txt" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ar.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\az.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\bg.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ca.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\cs.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\da.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\de.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\el.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\en.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\es.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\et.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\eu.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\fa.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\fi.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\fr.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\gl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\he.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\hi.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\hr.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\hu.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\id.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\is.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\it.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ja.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\km.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ko.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\lt.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\lv.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\mk.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ms.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\nb.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\nl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\pl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\pt-BR.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\pt.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ro.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\ru.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sk.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sr-Cyrl.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sr.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\sv.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\th.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\tr.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\uk.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\vi.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\zh-CN.js" />
+    <Content Include="static\admin\js\vendor\select2\i18n\zh-TW.js" />
+    <Content Include="static\admin\js\vendor\select2\select2.full.js" />
+    <Content Include="static\admin\js\vendor\select2\select2.full.min.js" />
+    <Content Include="static\admin\js\vendor\xregexp\LICENSE-XREGEXP.txt" />
+    <Content Include="static\admin\js\vendor\xregexp\xregexp.js" />
+    <Content Include="static\admin\js\vendor\xregexp\xregexp.min.js" />
+    <Content Include="static\admin_tools\css\dashboard-ie.css" />
+    <Content Include="static\admin_tools\css\dashboard.css" />
+    <Content Include="static\admin_tools\css\jquery\images\animated-overlay.gif" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-icons_222222_256x240.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-icons_454545_256x240.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-icons_888888_256x240.png" />
+    <Content Include="static\admin_tools\css\jquery\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="static\admin_tools\css\jquery\jquery-ui.css" />
+    <Content Include="static\admin_tools\css\menu-ie.css" />
+    <Content Include="static\admin_tools\css\menu.css" />
+    <Content Include="static\admin_tools\css\theming.css" />
+    <Content Include="static\admin_tools\images\admin-tools.png" />
+    <Content Include="static\admin_tools\images\django.png" />
+    <Content Include="static\admin_tools\js\dashboard.js" />
+    <Content Include="static\admin_tools\js\jquery\jquery-ui.min.js" />
+    <Content Include="static\admin_tools\js\jquery\jquery.cookie.min.js" />
+    <Content Include="static\admin_tools\js\jquery\jquery.dashboard.js" />
+    <Content Include="static\admin_tools\js\jquery\jquery.min.js" />
+    <Content Include="static\admin_tools\js\json.min.js" />
+    <Content Include="static\admin_tools\js\menu.js" />
+    <Content Include="static\admin_tools\js\utils.js" />
+    <Content Include="static\duradiff\favicon.png" />
+    <Content Include="static\duradiff\favicon2.png" />
+    <Content Include="static\duradiff\logo - Copy.jpg" />
+    <Content Include="static\duradiff\logo.jpg" />
+    <Content Include="static\import_export\action_formats.js" />
+    <Content Include="templates\registration\base_generic.html" />
+    <Content Include="templates\registration\logged_out.html" />
+    <Content Include="templates\registration\login.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="catalog" />
+    <Folder Include="duradiff" />
+    <Folder Include="duradiff\migrations" />
+    <Folder Include="duradiff\static\" />
+    <Folder Include="duradiff\static\duradiff" />
+    <Folder Include="duradiff\templates\" />
+    <Folder Include="duradiff\templates\duradiff" />
+    <Folder Include="duradiff\templates\pdf" />
+    <Folder Include="RAS\" />
+    <Folder Include="RAS\PythonToolsLinks1" />
+    <Folder Include="static\" />
+    <Folder Include="static\admin\" />
+    <Folder Include="static\admin\css" />
+    <Folder Include="static\admin\css\vendor\" />
+    <Folder Include="static\admin\css\vendor\select2" />
+    <Folder Include="static\admin\fonts" />
+    <Folder Include="static\admin\img" />
+    <Folder Include="static\admin\img\gis" />
+    <Folder Include="static\admin\js" />
+    <Folder Include="static\admin\js\admin" />
+    <Folder Include="static\admin\js\vendor\" />
+    <Folder Include="static\admin\js\vendor\jquery" />
+    <Folder Include="static\admin\js\vendor\select2" />
+    <Folder Include="static\admin\js\vendor\select2\i18n" />
+    <Folder Include="static\admin\js\vendor\xregexp" />
+    <Folder Include="static\admin_tools\" />
+    <Folder Include="static\admin_tools\css" />
+    <Folder Include="static\admin_tools\css\jquery" />
+    <Folder Include="static\admin_tools\css\jquery\images" />
+    <Folder Include="static\admin_tools\images" />
+    <Folder Include="static\admin_tools\js" />
+    <Folder Include="static\admin_tools\js\jquery" />
+    <Folder Include="static\duradiff" />
+    <Folder Include="static\import_export" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\registration" />
+    <Folder Include="tutorial3" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|VisualStudio|Resource Salary System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="resource\">
+      <Id>resource</Id>
+      <Version>3.6</Version>
+      <Description>resource (Resource Salary System)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

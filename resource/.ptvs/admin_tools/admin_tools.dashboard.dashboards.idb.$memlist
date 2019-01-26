@@ -1,0 +1,12 @@
+modules
+DefaultAppIndexDashboard
+AppIndexDashboard
+_
+force_text
+slugify
+uniquify
+DefaultIndexDashboard
+get_admin_site_name
+import_module
+reverse
+Dashboard

@@ -1,0 +1,13 @@
+itertools
+pd
+TestWhereCoercion
+tm
+CoercionBase
+np
+TestFillnaSeriesCoercion
+compat
+check_comprehensiveness
+TestInsertIndexCoercion
+pytest
+TestReplaceSeriesCoercion
+TestSetitemCoercion

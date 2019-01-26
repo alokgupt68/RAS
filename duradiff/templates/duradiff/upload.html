@@ -21,7 +21,7 @@
                    style="border: 1px solid black; padding: 5px;"
                    required="required">
             <p>
-            <input onclick="update()" type="submit"
+            <input type="submit"
                    value="Upload"
                    style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
         </form>
@@ -40,15 +40,11 @@
 	<a href="/accounts/logout/" class="btn btn-success btn-lg">
       <span class="glyphicon glyphicon-logout"></span> Logout 
     </a>
-  <script> function myFunction() {
-    document.getElementById("demo").innerHTML = "Data uploaded !!";
-   }
-</script>
 
         <p></p>
         <hr>
 	
-{{hrsworked | safe}} &nbsp &nbsp <br>
+{{loaded_data | safe}} &nbsp &nbsp <br>
 {{totalworked|safe}}<br>
 {{srid|safe|safe}}
 

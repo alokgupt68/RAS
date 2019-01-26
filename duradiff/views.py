@@ -10,6 +10,7 @@ import numpy as np
 from pandas import ExcelWriter, ExcelFile
 from os import path
 from django.db.models import Sum
+from django.db import IntegrityError
 from decimal import Decimal
 from django.http import HttpResponse, HttpResponseRedirect
 from datetime import date, timedelta, time, datetime
@@ -20,9 +21,12 @@ from django.forms import modelformset_factory
 from django.views.generic import View, TemplateView
 from django.views.generic.edit import FormView
 from django.shortcuts import redirect, render, render_to_response
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ObjectDoesNotExist
+
 def redirect_view(request):
     return render(request,'duradiff/inactiveres.html')
+def redirectfiletype_view(request):
+    return render(request,'duradiff/filetype.html')
 @login_required
 def gensal(request):
     if request.method == 'POST':  
@@ -36,7 +40,7 @@ def gensal(request):
         currentresource = Resource.objects.get(rid = rid)
         currentstatus = currentresource.status
         if (currentstatus == 'Inactive'):
-            #messages.error(request, 'the offrole resource is inactive')
+
             return redirect('inactiveres/')
             #raise form.ValidationError('Inactive RID, salary cannot be generated')
         else:
@@ -88,6 +92,7 @@ class TimeView(FormView):
     def post(self,request):
         form = timeentryform(request.POST or None)
         if form.is_valid():
+            #temprid = form.cleaned_data['rid']
             srid = form.cleaned_data['rid']
             #Accessing Foreign Key Values
             #When you access a field that’s a ForeignKey, in this case rid of Resource model, you’ll get the related model object from the ModelForm.
@@ -170,7 +175,7 @@ def upload_file(request):
            #raise ValidationError('upload only excel files')
            #messages.warning(request,'upload only excel')
            #return redirect('http://127.0.0.1:8000/accounts/login/gensal/upload')
-           return redirect('../gensal/inactiveres/')
+           return redirect('../gensal/filetype')
         else:
            df = pd.read_excel(excel_file)
         listPunchTime = (df['PunchTime'])
@@ -184,13 +189,20 @@ def upload_file(request):
            pass # pass statement means do nothing and move on, it is different from continue and break statements
         else:
            messages.warning(request,'Uploaded odd no. of attendance entries i.e. some unpaired attendance entries exist, pl. correct')
-           return redirect('http://127.0.0.1:8000/accounts/login/gensal/upload')
+           return redirect('/accounts/login/gensal/upload')
         #hrsworked = []
         while i < count:
             #Removing the first character 'C' from the card no of the bio-metric attendance sheet and converting to integer type for storing rid in Timesheet model
             srid = int(trid[i][1:])
             # The two lines below are used to access the shifthrs from the Resources model for the resource whose attendance records we are adding.
-            currentresource = Resource.objects.get(rid = srid)
+            try:
+               currentresource = Resource.objects.get(rid = srid)
+            except ObjectDoesNotExist:
+               messages.warning(request,'Biometric timesheet card entry %s does not have equivalent rid. Please make rid entry in master for it. Then before reuploading, please note that all timesheet entries above and below it have been uploaded. When reuploading first delete these entries' % trid[i], extra_tags='warning')
+               #return redirect('/accounts/login/gensal/upload')
+               i=i+2
+               continue
+               # continue takes you back to the while loop, that is why to move to the next iteration from the failed iteration, we increment i by 2, otherwise we will go into an inifinite loop if we do not increment i by 2
             ridshifthrs = currentresource.shifthrs
             endday = listPunchDate[i].date()
             theday = listPunchDate[i+1].date()
@@ -203,10 +215,15 @@ def upload_file(request):
             #if (((datetime.combine(listPunchDate[i].date(),listPunchTime[i]) - datetime.combine(listPunchDate[i+1].date(),listPunchTime[i+1])) < ridshifthrs)
                 #shiftshortfall = round((ridshifthrs - hrsworked),2)
             time_obj = Timesheet(rid=currentresource, theday=theday, endday = endday, timeinhr = timeinhr, timeouthr=timeouthr,hrsworked=hrsworked,OT=OT,ridshifthrs=ridshifthrs)
-            time_obj.save()
-            i = i + 2
+            try:
+                time_obj.save()
+                i = i + 2
+            except IntegrityError:
+                messages.warning(request,'This rid %s exists with that timesheet %s' % (srid, theday))
+                i = i + 2
+                continue
         # Pandas dataframe can be converted to html table by itself.
-        messages.success(request,'file is uploaded')
+        messages.success(request,'File is uploaded but correct the errors, if any')
         df_html = df.to_html()
         context = {'loaded_data':df_html}
         #totalworked = sum(hrsworked)
@@ -216,6 +233,6 @@ def upload_file(request):
 def getridname(request):
     # Expect an auto 'type' to be passed in via Ajax and POST
     if request.is_ajax() and request.method == 'POST':
-      ridname = Resource.objects.get(rid=request.POST.get('rid'))
-    #messages.warning(request,'upload only excel')
+      ridname = Resource.objects.get(rid=request.POST.get('rid')).rid
+    
     return HttpResponse(ridname)

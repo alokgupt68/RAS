@@ -1,0 +1,8 @@
+test_libfrequencies
+test_liboffsets
+test_ccalendar
+test_period_asfreq
+test_conversion
+test_array_to_datetime
+test_timezones
+test_parsing

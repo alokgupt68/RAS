@@ -1,0 +1,8 @@
+modules
+CustomIndexDashboard
+_
+get_admin_site_name
+CustomAppIndexDashboard
+AppIndexDashboard
+reverse
+Dashboard

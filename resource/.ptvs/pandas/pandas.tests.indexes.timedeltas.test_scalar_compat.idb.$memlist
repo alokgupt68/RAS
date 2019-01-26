@@ -1,0 +1,9 @@
+pd
+timedelta_range
+Timedelta
+np
+Index
+Series
+TestVectorizedTimedelta
+tm
+TimedeltaIndex

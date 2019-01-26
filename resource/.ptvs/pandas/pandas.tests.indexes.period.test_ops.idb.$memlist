@@ -1,0 +1,14 @@
+Series
+pd
+TestPeriodIndexOps
+_np_version_under1p10
+tm
+np
+Index
+DatetimeIndex
+tslib
+Ops
+PeriodIndex
+pytest
+Period
+TestPeriodIndexSeriesMethods
